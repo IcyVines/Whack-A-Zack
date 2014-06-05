@@ -23,7 +23,7 @@ import android.widget.ImageView;
 import android.os.Build;
 import android.provider.MediaStore;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener{
 	private static final int SELECT_PICTURE = 1;
 	//private String selectedImagePath;
 	//private String filemanagerstring;
@@ -36,15 +36,24 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-	/*	hole1= (ImageButton)(findViewById(R.id.hole1));
+		hole1= (ImageButton)(findViewById(R.id.hole1));
+		hole1.setOnClickListener(this);
 		hole2= (ImageButton)(findViewById(R.id.hole2));
+		hole2.setOnClickListener(this);
 		hole3= (ImageButton)(findViewById(R.id.hole3));
+		hole3.setOnClickListener(this);
 		hole4= (ImageButton)(findViewById(R.id.hole4));
+		hole4.setOnClickListener(this);
 		hole5= (ImageButton)(findViewById(R.id.hole5));
+		hole5.setOnClickListener(this);
 		hole6= (ImageButton)(findViewById(R.id.hole6));
+		hole6.setOnClickListener(this);
 		hole7= (ImageButton)(findViewById(R.id.hole7));
+		hole7.setOnClickListener(this);
 		hole8= (ImageButton)(findViewById(R.id.hole8));
-		hole9= (ImageButton)(findViewById(R.id.hole9));*/
+		hole8.setOnClickListener(this);
+		hole9= (ImageButton)(findViewById(R.id.hole9));
+		hole9.setOnClickListener(this);
 	
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
@@ -90,6 +99,12 @@ public class MainActivity extends Activity {
 					false);
 			return rootView;
 		}
+	}
+
+	@Override
+	public void onClick(View v) {
+		
+		
 	}
 
 }
