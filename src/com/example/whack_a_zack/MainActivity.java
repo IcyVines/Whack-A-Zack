@@ -55,13 +55,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		hole9= (ImageButton)(findViewById(R.id.hole9));
 		hole9.setOnClickListener(this);
 	
-		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
 	}
-
-	
 
 
 	@Override
