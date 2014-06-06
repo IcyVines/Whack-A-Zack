@@ -24,9 +24,12 @@ import android.os.Build;
 import android.provider.MediaStore;
 
 public class MainActivity extends Activity implements OnClickListener{
-	private static final int SELECT_PICTURE = 1;
+	//private static final int SELECT_PICTURE = 1;
 	//private String selectedImagePath;
 	//private String filemanagerstring;
+	private int score=0;
+	private int time;
+	//private int lives=3;
 	private ImageButton hole1,hole2,hole3,hole4,hole5,hole6,hole7,hole8,hole9;
 	private ImageButton[] holes= new ImageButton[9];
 	private EditText timeText,scoreText;
@@ -36,6 +39,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		scoreText= (EditText)(findViewById(R.id.score));
 		hole1= (ImageButton)(findViewById(R.id.hole1));
 		hole1.setOnClickListener(this);
 		holes[0]=hole1;
