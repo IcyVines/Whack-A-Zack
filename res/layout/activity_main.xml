@@ -1,16 +1,219 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFCCCCCC"
+    android:orientation="vertical"
+    android:stretchColumns="1,2,3"
     tools:context="com.example.whack_a_zack.MainActivity"
     tools:ignore="MergeRootFrame" >
 
-    <ImageButton
-        android:id="@+id/button1"
+    <TableRow
+        android:id="@+id/tableRow0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
-   
+        android:stretchColumns="1,2,3" >
 
-</FrameLayout>
+        <TableLayout
+            android:layout_column="1"
+            android:stretchColumns="1,2" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:gravity="right"
+                    android:text="@string/time" />
+
+                <EditText
+                    android:id="@+id/time_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left"
+                    android:inputType="number"
+                    android:text="@string/time_count" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout android:layout_column="2" >
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/start"
+                android:textSize="14sp"
+                android:width="50dp" />
+        </TableLayout>
+
+        <TableLayout
+            android:layout_column="3"
+            android:stretchColumns="1,2" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:gravity="right"
+                    android:text="@string/life" />
+
+                <EditText
+                    android:id="@+id/life_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left"
+                    android:inputType="number"
+                    android:text="@string/life_count" />
+            </TableRow>
+        </TableLayout>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/hole1"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:contentDescription="First"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+
+        <ImageButton
+            android:id="@+id/hole2"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:contentDescription="Second"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+
+        <ImageButton
+            android:id="@+id/hole3"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="3"
+            android:contentDescription="Third"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/hole4"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:contentDescription="Fourth"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+
+        <ImageButton
+            android:id="@+id/hole5"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:contentDescription="Fifth"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+
+        <ImageButton
+            android:id="@+id/hole6"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="3"
+            android:contentDescription="Sixth"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/hole7"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:contentDescription="Seventh"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+
+        <ImageButton
+            android:id="@+id/hole8"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:contentDescription="Eighth"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+
+        <ImageButton
+            android:id="@+id/hole9"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_column="3"
+            android:contentDescription="Ninth"
+            android:gravity="center"
+            android:src="@drawable/whackzack"
+            android:width="50dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:paddingTop="10dp"
+            android:text="@string/score_count"
+            android:width="50dp" />
+    </TableRow>
+
+</TableLayout>

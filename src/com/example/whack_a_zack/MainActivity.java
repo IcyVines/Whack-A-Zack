@@ -64,13 +64,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		hole9.setOnClickListener(this);
 		holes[8]=hole9;
 	
-		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
 	}
-
-	
 
 
 	@Override
