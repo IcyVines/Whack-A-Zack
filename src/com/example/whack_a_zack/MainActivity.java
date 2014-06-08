@@ -20,6 +20,7 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.os.Build;
 import android.provider.MediaStore;
 
@@ -32,7 +33,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	//private int lives=3;
 	private ImageButton hole1,hole2,hole3,hole4,hole5,hole6,hole7,hole8,hole9;
 	private ImageButton[] holes= new ImageButton[9];
-	private EditText timeText,scoreText;
+	private TextView timeText,scoreText;
 	//private ImageView selectedImage;
 
 	@Override
@@ -94,23 +95,12 @@ public class MainActivity extends Activity implements OnClickListener{
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
-	public static class PlaceholderFragment extends Fragment {
 
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
-			return rootView;
-		}
-	}
 
 	@Override
 	public void onClick(View v) {
-		
+		score+=10;
+		scoreText.setText(score+"");
 		
 	}
 
