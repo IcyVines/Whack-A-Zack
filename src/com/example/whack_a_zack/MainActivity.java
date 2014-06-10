@@ -3,26 +3,18 @@ package com.example.whack_a_zack;
 import com.example.whack_a_zack.R;
 
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.os.Build;
-import android.provider.MediaStore;
+import android.text.format.Time;
+
+
 
 public class MainActivity extends Activity implements OnClickListener{
 	//private static final int SELECT_PICTURE = 1;
@@ -34,12 +26,22 @@ public class MainActivity extends Activity implements OnClickListener{
 	private ImageButton hole1,hole2,hole3,hole4,hole5,hole6,hole7,hole8,hole9;
 	private ImageButton[] holes= new ImageButton[9];
 	private TextView timeText,scoreText;
+	private Button startButton;
 	//private ImageView selectedImage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		startButton= (Button)(findViewById(R.id.start));
+		startButton.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				playGame();				
+			}
+			
+		});
 		scoreText= (EditText)(findViewById(R.id.score));
 		hole1= (ImageButton)(findViewById(R.id.hole1));
 		hole1.setOnClickListener(this);
@@ -103,5 +105,19 @@ public class MainActivity extends Activity implements OnClickListener{
 		scoreText.setText(score+"");
 		
 	}
+	public void setToFriendly(ImageButton b){
+		b.setOnClickListener(new OnClickListener(){
 
+			@Override
+			public void onClick(View v) {
+				score-=10;
+				scoreText.setText(score+"");
+				
+			}
+			
+		});
+	}
+	public void playGame(){
+		Time now=new Time();
+	}
 }
