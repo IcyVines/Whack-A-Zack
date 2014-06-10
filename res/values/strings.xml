@@ -11,5 +11,6 @@
 	<string name="time">Time:</string>
 	<string name="life">Lives:</string>
 	<string name="start">Start Whacking</string>
+	<string name="score">&quot;Score:&quot;</string>
 	
 </resources>
