@@ -26,11 +26,6 @@ public final class R {
         public static final int whackzack=0x7f020001;
     }
     public static final class id {
-<<<<<<< HEAD
-        public static final int action_settings=0x7f080002;
-        public static final int button1=0x7f080001;
-        public static final int container=0x7f080000;
-=======
         public static final int action_settings=0x7f080014;
         public static final int hole1=0x7f080007;
         public static final int hole2=0x7f080008;
@@ -52,7 +47,6 @@ public final class R {
         public static final int tableRow4=0x7f080012;
         public static final int time=0x7f080001;
         public static final int time_count=0x7f080002;
->>>>>>> 721515008033e20860c96ae199c909db68f7752b
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

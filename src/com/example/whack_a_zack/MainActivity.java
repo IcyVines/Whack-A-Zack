@@ -17,9 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.os.Build;
 import android.provider.MediaStore;
 
@@ -29,43 +31,61 @@ public class MainActivity extends Activity implements OnClickListener{
 	//private String filemanagerstring;
 	private ImageButton hole1,hole2,hole3,hole4,hole5,hole6,hole7,hole8,hole9;
 	private ImageButton[] holes= new ImageButton[9];
-	private EditText timeText,scoreText;
+	private Button start;
+	private TextView timeText,scoreText;
 	//private ImageView selectedImage;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		hole1= (ImageButton)(findViewById(R.id.hole1));
-		hole1.setOnClickListener(this);
 		holes[0]=hole1;
 		hole2= (ImageButton)(findViewById(R.id.hole2));
-		hole2.setOnClickListener(this);
 		holes[1]=hole2;
 		hole3= (ImageButton)(findViewById(R.id.hole3));
-		hole3.setOnClickListener(this);
 		holes[2]=hole3;
 		hole4= (ImageButton)(findViewById(R.id.hole4));
-		hole4.setOnClickListener(this);
 		holes[3]=hole4;
 		hole5= (ImageButton)(findViewById(R.id.hole5));
-		hole5.setOnClickListener(this);
 		holes[4]=hole5;
 		hole6= (ImageButton)(findViewById(R.id.hole6));
-		hole6.setOnClickListener(this);
 		holes[5]=hole6;
 		hole7= (ImageButton)(findViewById(R.id.hole7));
-		hole7.setOnClickListener(this);
 		holes[6]=hole7;
 		hole8= (ImageButton)(findViewById(R.id.hole8));
-		hole8.setOnClickListener(this);
 		holes[7]=hole8;
 		hole9= (ImageButton)(findViewById(R.id.hole9));
-		hole9.setOnClickListener(this);
 		holes[8]=hole9;
-	
+		for(ImageButton hole : holes){
+			hole.setVisibility(2);
+			hole.setClickable(false);
+			hole.setOnClickListener(this);
+		}
+		timeText = (EditText)(findViewById(R.id.time_count));
+		timeText.setText("" + 60);
+		start = (Button)(findViewById(R.id.start));
+		start.setOnClickListener(this);
 	}
 
+	@Override
+	public void onClick(View v) {
+		if(v.getId() == R.id.start){
+			countDown();
+		}
+	}
+	
+	private void countDown(){
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		timeText.setText(Integer.parseInt(timeText.getText().toString()) - 1 + "");
+		if(!timeText.getText().toString().equals(0))
+			countDown();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -102,12 +122,6 @@ public class MainActivity extends Activity implements OnClickListener{
 					false);
 			return rootView;
 		}
-	}
-
-	@Override
-	public void onClick(View v) {
-		
-		
 	}
 
 }
