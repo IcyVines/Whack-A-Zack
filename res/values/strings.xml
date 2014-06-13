@@ -6,8 +6,8 @@
     <string name="action_settings">Settings</string>
 	<string name="whack_zack">Zack</string>
 	<string name="score_count">0</string>
-	<string name="life_count">0</string>
-	<string name="time_count">0</string>
+	<string name="life_count">3</string>
+	<string name="time_count">30</string>
 	<string name="time">Time:</string>
 	<string name="life">Lives:</string>
 	<string name="start">Start Whacking</string>
